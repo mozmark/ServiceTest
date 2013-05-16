@@ -1,0 +1,14 @@
+{
+  "command":{
+    "description":"a demonstration command",
+    "params":[
+    {
+      "name":"arg",
+      "type": {"name":"selection","dataAction":"http://localhost:8083/values.json"},
+      "defaultValue": "",
+      "description":"an example arg that gets its complete actions from a web service call"
+    }
+    ],
+        "url":"http://localhost:8083/JSON/things/${arg}"
+  }
+}
