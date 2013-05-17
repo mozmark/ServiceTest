@@ -1,16 +1,16 @@
 {
-  "command":{
+  "commands":[{
+    "name":"command",
     "description":"an example command",
     "returnType":"string",
     "params":[
     {
       "name":"arg",
       "type": {"name":"selection","dataAction":"http://%{host}/static/values.json"},
-      "defaultValue": "",
       "description":"an example arg that gets its complete actions from a web service call"
     }
     ],
     "url":"http://%{host}/call/${arg}",
     "expression":"$.Result"
-  }
+  }]
 }

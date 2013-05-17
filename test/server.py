@@ -29,7 +29,7 @@ def handle(s, path, prefix, template):
       s.wfile.write(data)
       return
     except IOError as e:
-      print('something went wrong '+e)
+      print('something went wrong '+str(e))
       pass
   # file is not there (or not within root)
   s.send_response(404)
