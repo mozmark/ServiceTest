@@ -1,5 +1,8 @@
 {
   "commands":[{
+    "description":"These are sample commands to demonstrate calling a REST service from GCLI "
+  },
+  {
     "name":"command",
     "description":"an example command",
     "returnType":"string",
