@@ -10,6 +10,7 @@ Why?
 I'm [experimenting](https://github.com/mozmark/Mitm-Tool) with driving security tools with Firefox. One problem I have is that different security tools expose different functionality. I wanted to expose the power of different tools without implementing specifics.  It occurs to me some of these techniques might be useful elswhere, thus the repo.
 
 How?
+---
 If you're already familiar with [GCLI](https://github.com/mozilla/gcli) this will be fairly easy to understand. Here's a run down:
 * The tool allows you to load commands with a specified prefix from a specified URL. E.g. you might want to add an 'example' command from the URL 'http://localhost:3000/templates/service.json'.
 * The specified URL must contain a descriptor. The descriptor looks kind of like a JSON object containing some [gcli commands](https://github.com/joewalker/gcli/blob/master/docs/writing-commands.md). You can see an example [here](https://github.com/mozmark/ServiceTest/blob/master/test/templates/service.json).
