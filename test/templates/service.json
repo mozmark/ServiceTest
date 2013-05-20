@@ -13,7 +13,10 @@
       "description":"an example arg that gets its complete actions from a web service call"
     }
     ],
-    "url":"http://%{host}/call/${arg}",
-    "expression":"$.Result"
+    "execAction":{
+      "url":"http://%{host}/call/${arg}",
+      "expression":"$.Result",
+      "callbackData":{"foo":"bar"}
+    }
   }]
 }
