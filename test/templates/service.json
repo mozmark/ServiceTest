@@ -9,7 +9,12 @@
     "params":[
     {
       "name":"arg",
-      "type": {"name":"selection","dataAction":"http://%{host}/static/values.json"},
+      "type": {
+        "name":"selection",
+        "dataAction":{
+          "url":"http://%{host}/static/values.json",
+          "expression":"$.results[*]"
+      }},
       "description":"an example arg that gets its complete actions from a web service call"
     }
     ],
