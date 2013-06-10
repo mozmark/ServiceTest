@@ -21,7 +21,7 @@
     "execAction":{
       "url":"http://%{host}/call/${arg}",
       "expression":"$.Result",
-      "callbackData":{"foo":"bar","wibble":{"type":"expression","expression":"$.response.Result"}}
+      "callbackData":{"foo":"bar","wibble":{"type":"expression","expression":"$.response.Result","extract":true}}
     }
   }]
 }
