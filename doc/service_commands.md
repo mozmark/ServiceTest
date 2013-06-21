@@ -92,3 +92,25 @@ You can limit the possible values for a parameter by using providing an object (
 ```
 Here we have a parameter called param1 which can take the values name1, name2 or name3 - if the user does not specify a value it will default to name2.
 
+
+Callback Data:
+--------------
+Sometimes it's useful to get information from parameters (or a response) into the addon.
+
+To do this, a callbackData object is added to execAction. Once the action has been completed, a callback is invoked with a callbackData object based on one specified in the descriptor. e.g:
+```json
+"execAction": {
+  "url": "http://mdgmbp3.local:3000/call/${arg}",
+  "expression": "$.Result",
+  "callbackData": {
+    "foo": "bar", 
+    "wibble": {
+      "type": "expression",
+      "expression": "$.response.Result",
+      "extract": true
+    }
+  }
+}
+```
+
+In this case, the callbackData object has an attribte, "wibble" which will be replaced with the result of the expression specified. Notice this expression refers to 'response'; there are two attributes added to the object the JSONPath expression is evaluated against: 'response' (containing the response object from the execAction call) and 'args' - the arguments supplied to the command. "extract" specifies whether or not the resulting value should be extracted from the array (JSONPath expression results are always returned in an array - if you know your expression only matches a single value you may wish to extract this).
